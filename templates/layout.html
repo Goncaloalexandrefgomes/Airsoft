@@ -23,7 +23,7 @@
 <div class="navbar">
   <a class="active" href="/"><i class="fa fa-fw fa-home"></i> Home</a>
   {% for nome in menu %}
-  <a href="/pr_ini/{{ nome.title }}"><i class="{{ icons.pop() }}"></i> {{ nome.title }}</a>
+  <a href="/pr_ini/{{ nome.title }}">{{ nome.title }}</a>
   {% endfor %}
   <a href="/carrinho_ini"><i class="fas fa-shopping-cart"></i> Carrinho</a>
   {% if usr %}
@@ -37,15 +37,12 @@
 {% block conteudo %}
 {% endblock %}
 
-<br><center>
-<h3>&copy; Copyright 2019 Gonçalo Gomes</h3>
-</center>
 
 <footer class="footer">
     <div class="icons">
         <div class="phone">
             <i class="fas fa-phone"></i>
-            <p>926857339</p>
+            <p>9********</p>
         </div>
 
         <div class="email">
@@ -60,8 +57,6 @@
     </div>
 
     <div class="info">
-        <p class="info-title">Sobre a Loja</p>
-        <p class="info-content">Este é um mini projeto dedicado à compra de produtos online. Feito no âmbito da disciplina de PSI</p>
         <div>
             <div>
                 <a href="http://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -75,3 +70,7 @@
 </footer>
 </body>
 </html>
+
+<br><center>
+<h3>&copy; Copyright 2019 Gonçalo Gomes</h3>
+</center>
