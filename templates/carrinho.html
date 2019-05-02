@@ -31,7 +31,7 @@
                 <moeda>{{ loja.moeda(folha.cell(row = li, column = folha.max_column).value) }}</moeda>
                 <shop><i class="fas fa-shopping-cart"></i> Carrinho: <b>{{ unidades[folha.title, li] }}</b></shop>
                 <form action="/sub/{{ linha }}">
-                    <input type='submit' value='Remover'>
+                    <input class="btn" type='submit' value='Remover'>
                 </form>
             </td>
             <!-- Se a linha já tiver o número máximo de items permitido, mudar... -->
@@ -68,12 +68,12 @@
             <input type="text" name="nome" value="{{ loja.usr.nome }} "required>
             <p></p><label>Morada de envio</label>
             <textarea rows="4" cols="34" name="morada" required>{{ loja.usr.morada }}</textarea>
-            <p><br></p><input type='submit' value='Finalizar a Encomenda'>
+            <p><br></p><input class="btn" type='submit' value='Finalizar a Encomenda'>
         </fieldset>
     </form>
     {% elif usr %}
     <form action="/encomendar">
-        <input type='submit' value='Encomendar'>
+        <input class="btn" type='submit' value='Encomendar'>
     </form>
     {% else %}
     <h3>Inicie a sessão para efetuar a encomenda.</h3>
