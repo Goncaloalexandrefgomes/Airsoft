@@ -206,3 +206,7 @@ td {
   background-color: #868e89;
   color: white;
 }
+
+.padding-1 {
+    padding: 100px;
+}
