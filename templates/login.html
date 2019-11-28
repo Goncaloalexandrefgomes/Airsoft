@@ -5,17 +5,18 @@
 
 {% block conteudo %}
 <center>
-    <h1>Iniciar Sessão</h1>
+    <p class="p-padding-3" ></p>
+    <p class="title-login" >Iniciar Sessão</p>
+    <br>
     <form method="post">
         <fieldset>
-            <legend>Introduza os seus dados</legend>
-            <h4>Utilizador</h4>
+            <p>Utilizador</p>
             <input type="text" name="utilizador" required>
-            <p><br></p>
-            <h4>Palavra-Passe</h4>
+            <p><br><br></p>
+            <p>Palavra-Passe</p>
             <input type="password" name="passe" required>
             <p><br></p>
-            <input class="btn "type="submit" value="Iniciar Sessão">
+            <input type="submit" value="Iniciar Sessão">
         </fieldset>
     </form>
     {% if erro %}<h4>{{ erro }}</h4>{% endif %}

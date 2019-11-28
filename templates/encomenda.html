@@ -5,9 +5,11 @@
 
 {% block conteudo %}
 <center>
-    <h1>Obrigado por comprar na nossa loja!</h1>
-    <h3>A sua encomenda foi registada com sucesso.</h3>
+    <p class="p-padding-3" ></p>
+    <p class="title-encomenda" >Obrigado por comprar na nossa loja!</p>
+    <p class="content-encomenda" >A sua encomenda foi registada com sucesso.</p>
     <img src="/static/images/encomenda.png"><br>
-    <input class="btn" type="button" value="Obter Comprovativo" onclick="window.open('/static/faturas/{{ fatura }}')">
+    <p class="p-padding-4" ></p>
+    <input type="button" value="Obter Comprovativo" onclick="window.open('/static/faturas/{{ fatura }}')">
 </center>
 {% endblock %}

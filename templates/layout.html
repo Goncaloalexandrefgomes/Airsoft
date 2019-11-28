@@ -21,46 +21,47 @@
 
 {% set icons = ['fas fa-question', 'fas fa-archive', 'fas fa-microchip', 'fas fa-desktop'] %}
 <div class="navbar">
-  <a class="active" href="/"><i class="fa fa-fw fa-home"></i> Home</a>
+  <a class="active" href="/">Home</a>
   {% for nome in menu %}
   <a href="/pr_ini/{{ nome.title }}">{{ nome.title }}</a>
   {% endfor %}
-  <a href="/carrinho_ini"><i class="fas fa-shopping-cart"></i> Carrinho</a>
+  <a href="/carrinho_ini">Carrinho</a>
   {% if usr %}
-  <a href="/logout"><i class="fa fa-fw fa-user"></i> Logout</a>
-  <user><i class="fa fa-fw fa-user-tie"></i> {{ usr }}</user>
+  <a href="/logout">Logout</a>
+  <user>{{ usr }}</user>
   {% else %}
-  <a href="/login"><i class="fa fa-fw fa-lock"></i> Login</a>
-  <a href="/registo"><i class="fa fa-fw fa-user"></i> Registo</a>
+  <a href="/login">Login</a>
+  <a href="/registo">Registo</a>
   {% endif %}
 </div>
 {% block conteudo %}
 {% endblock %}
 
+<br><center>
+</center>
 
-<p class="padding-1" ></p>
+<p class="p-padding-1"></p>
 <footer class="footer">
     <div class="icons">
         <div class="phone">
             <i class="fas fa-phone"></i>
-            <font color="#222"><p>919632413</p></font>
+            <p>913219329</p>
         </div>
 
         <div class="email">
             <i class="fas fa-envelope"></i>
-            <font color="#222"><p>goncalo.gomes1412003@gmail.com</p></font>
+            <p>lccpg0293@gmail.com</p>
         </div>
 
         <div class="marker">
             <i class="fas fa-map-marked-alt"></i>
-           <font color="#222"><p>Rua das Alminhas,Abilio 6ºesq Sameiro</p></font>
-        </div>
-        <div>
-           <center><font color="#222"><p>&copy; Copyright 2019 Gonçalo Gomes</p></font></center>
+            <p>Rua das Portas 80 R/CH ESQ TRÁS</p>
         </div>
     </div>
 
     <div class="info">
+        <p class="info-title">Sobre a Loja</p>
+        <p class="info-content">Este é um mini projeto dedicado à compra de produtos online. Feito no âmbito da disciplina de PSI</p>
         <div>
             <div>
                 <a href="http://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -70,8 +71,7 @@
             </div>
         </div>
     </div>
-
 </footer>
+<p class="copyright">&copy; Copyright 2019 Luís Guerra</p>
 </body>
 </html>
-

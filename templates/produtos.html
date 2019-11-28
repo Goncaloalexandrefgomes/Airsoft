@@ -5,7 +5,8 @@
 
 {% block conteudo %}
 <center>
-    <h1>{{ folha.title }}</h1>
+    <p class="p-padding-3" ></p>
+    <p class="title-produtos" >{{ folha.title }}</p>
     <!-- O número máximo de items por linha é ... ? -->
     {% set items = loja.items_linha %}
     {% set delta = 2 %}
@@ -19,19 +20,23 @@
         <tr>
             {% for li in range(min, max) %}
             <td>
-                <img src='/static/{{ folha.title }}/{{ folha.cell(row = li, column = 1).value }}.jpg' width="256">
+                <img src='/static/{{ folha.title }}/{{ folha.cell(row = li, column = 1).value }}.jpg'>
+                <p></p>
                 {% for co in range(1, folha.max_column) %}<br>
                 {{ folha.cell(row = 1, column = co).value }}:
                 {{ folha.cell(row = li, column = co).value }}
                 {% endfor %}
+                <br><br><br>
                 <moeda>{{ loja.moeda(folha.cell(row = li, column = folha.max_column).value) }}</moeda>
+                <br>
                 {% if (folha.title, li) in unidades %}
                 <shop><i class="fas fa-shopping-cart"></i> Carrinho: <b>{{ unidades[folha.title, li] }}</b></shop>
                 {% else %}
-                <p><br></p>
+                <p><br></p> <!-- Espaço para o carrinho de compras. NÃO TIRAR  -->
                 {% endif %}
+                <br>
                 <form action="/add/{{ folha.title }}/{{ li }}">
-                    <input class="btn" type='submit' value='Comprar'>
+                    <input type='submit' value='Comprar'>
                 </form>
             </td>
             <!-- Se a linha já tiver o número máximo de items permitido, mudar... -->
